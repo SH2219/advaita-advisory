@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Northvale Advisory — strategic capital structuring, transaction advisory, and financial consulting for ambitious businesses." />
+  <title>Northvale Advisory | Strategic Capital. Smarter Growth.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: { DEFAULT: '#142033', soft: '#1e2d45' },
+            ivory: { DEFAULT: '#f8f6f1', deep: '#f0ece4' },
+            stone: { DEFAULT: '#e5e1d8', soft: '#ebe7df' },
+            charcoal: { DEFAULT: '#2a2a28', muted: '#5c5a55' },
+            accent: { DEFAULT: '#2f6b5d', hover: '#25574b' },
+            line: '#ddd8ce',
+          },
+          fontFamily: {
+            display: ['"Instrument Serif"', 'Georgia', 'serif'],
+            sans: ['Manrope', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page-loader" role="status" aria-live="polite" aria-label="Loading">
+    <div class="loader-inner">
+      <div class="loader-brand">
+        <span>NORTHVALE</span>
+        <span>ADVISORY</span>
+      </div>
+      <div class="loader-bar" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Northvale Advisory home">
+        Northvale
+        <span>Advisory</span>
+      </a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="team.html">Team</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="transactions.html">Transactions</a>
+        <a class="nav-link" href="case-studies.html">Case Studies</a>
+        <a class="nav-link" href="careers.html">Careers</a>
+        <a class="btn btn-primary btn-magnetic" href="index.html#contact">Contact Us</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav id="mobile-nav" class="nav-mobile" aria-hidden="true" aria-label="Mobile">
+    <a href="about.html">About</a>
+    <a href="team.html">Team</a>
+    <a href="services.html">Services</a>
+    <a href="transactions.html">Transactions</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="careers.html">Careers</a>
+    <a href="index.html#contact">Contact</a>
+    <div class="nav-mobile-cta">
+      <a class="btn btn-primary" href="index.html#contact">Contact Us</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container-wide hero-grid">
+        <div>
+          <p class="eyebrow hero-animate hero-animate-1">Strategic Advisory</p>
+          <div class="hero-rule hero-animate hero-animate-2" aria-hidden="true"></div>
+          <h1 class="hero-title font-display hero-animate hero-animate-3">
+            <span class="line"><span>Strategic Capital.</span></span>
+            <span class="line"><span>Smarter Growth.</span></span>
+          </h1>
+          <p class="hero-lead hero-animate hero-animate-4">
+            We help ambitious businesses make better financial decisions,
+            structure capital intelligently, and execute complex transactions
+            with clarity and discipline.
+          </p>
+          <div class="hero-actions hero-animate hero-animate-5">
+            <a class="btn btn-primary btn-arrow btn-magnetic" href="services.html">
+              Explore Services
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+            </a>
+            <a class="btn btn-ghost btn-arrow" href="transactions.html">
+              View Transactions
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual hero-animate hero-animate-4">
+          <div class="hero-image-wrap">
+            <img
+              class="hero-image"
+              src="assets/images/hero-architecture.png"
+              alt="Modern architectural glass facade"
+              width="800"
+              height="840"
+              fetchpriority="high"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="section section-border bg-texture" id="about-preview">
+      <div class="container intro-layout">
+        <div class="reveal">
+          <p class="eyebrow">About Northvale</p>
+          <h2 class="intro-statement font-display">
+            We bring <em>clarity</em> to complex capital decisions.
+          </h2>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <p class="intro-body">
+            Northvale Advisory partners with businesses, promoters and investors
+            to structure capital, navigate complex transactions and unlock
+            sustainable growth — with independent thinking and execution discipline.
+          </p>
+          <a class="btn btn-ghost btn-arrow" href="about.html" style="margin-top:1.5rem">
+            Our story
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metrics -->
+    <section class="section-sm" aria-label="Firm metrics">
+      <div class="container">
+        <div class="metrics reveal">
+          <div class="metric">
+            <div class="metric-value"><span data-count="12" data-suffix="+">0</span></div>
+            <div class="metric-label">Years of Experience</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">₹<span data-count="8500" data-suffix=" Cr+">0</span></div>
+            <div class="metric-label">Capital Structured</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value"><span data-count="120" data-suffix="+">0</span></div>
+            <div class="metric-label">Transactions</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value"><span data-count="14">0</span></div>
+            <div class="metric-label">Industries Served</div>
+          </div>
+        </div>
+        <p class="meta" style="margin-top:1rem;opacity:0.7">Placeholder metrics for prototype — replace with verified figures.</p>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section section-border" id="services-preview">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Capabilities</span>
+          <h2 class="section-title font-display">Advisory built for capital complexity.</h2>
+          <p class="section-sub">From balance-sheet design to transaction close — integrated advice across debt, equity and strategy.</p>
+        </div>
+        <div class="service-list reveal" role="list">
+          <button type="button" class="service-row" role="listitem" aria-expanded="false">
+            <span class="service-num">01</span>
+            <div>
+              <h3 class="service-name">Corporate Finance</h3>
+              <p class="service-desc">Capital planning, financial modelling and board-level advisory for growth, restructuring and liquidity events.</p>
+            </div>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </button>
+          <button type="button" class="service-row" role="listitem" aria-expanded="false">
+            <span class="service-num">02</span>
+            <div>
+              <h3 class="service-name">Debt Advisory</h3>
+              <p class="service-desc">Term loans, structured credit and lender negotiations calibrated to cash flows, covenants and timing.</p>
+            </div>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </button>
+          <button type="button" class="service-row" role="listitem" aria-expanded="false">
+            <span class="service-num">03</span>
+            <div>
+              <h3 class="service-name">Equity &amp; Capital Structuring</h3>
+              <p class="service-desc">Ownership design, preferential instruments and fundraising strategy aligned with promoter and investor objectives.</p>
+            </div>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </button>
+          <button type="button" class="service-row" role="listitem" aria-expanded="false">
+            <span class="service-num">04</span>
+            <div>
+              <h3 class="service-name">Transaction Advisory</h3>
+              <p class="service-desc">M&amp;A support, diligence coordination and deal structuring from intent through documentation and close.</p>
+            </div>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </button>
+          <button type="button" class="service-row" role="listitem" aria-expanded="false">
+            <span class="service-num">05</span>
+            <div>
+              <h3 class="service-name">Project Finance</h3>
+              <p class="service-desc">Non-recourse and limited-recourse financing for infrastructure, energy and large-scale development projects.</p>
+            </div>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </button>
+          <button type="button" class="service-row" role="listitem" aria-expanded="false">
+            <span class="service-num">06</span>
+            <div>
+              <h3 class="service-name">Strategic Financial Advisory</h3>
+              <p class="service-desc">Scenario planning, capital allocation frameworks and decision support for transformative business moves.</p>
+            </div>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </button>
+        </div>
+        <div class="reveal" style="margin-top:2rem">
+          <a class="btn btn-ghost btn-arrow" href="services.html">
+            All services
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sectors -->
+    <section class="section section-border bg-texture">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Sectors</span>
+          <h2 class="section-title font-display">Where we apply depth.</h2>
+        </div>
+        <div class="sectors-grid reveal" aria-label="Industries">
+          <div class="sector-item">Real Estate</div>
+          <div class="sector-item">Infrastructure</div>
+          <div class="sector-item">Manufacturing</div>
+          <div class="sector-item">Energy</div>
+          <div class="sector-item">Logistics</div>
+          <div class="sector-item">Technology</div>
+          <div class="sector-item">Healthcare</div>
+          <div class="sector-item">Consumer</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transactions preview -->
+    <section class="section section-border">
+      <div class="container-wide">
+        <div class="section-head reveal" style="width:min(1120px,calc(100% - 0px));margin-inline:auto;padding-inline:0">
+          <div class="container" style="width:100%;padding:0">
+            <span class="eyebrow">Transactions</span>
+            <h2 class="section-title font-display">Selected mandates.</h2>
+            <p class="section-sub">Representative, anonymised engagements illustrating scale and sector range.</p>
+          </div>
+        </div>
+        <div class="tx-scroll reveal" tabindex="0" aria-label="Transaction highlights">
+          <article class="tx-card">
+            <div class="tx-meta">
+              <span class="meta">2026</span>
+              <span class="meta">Infrastructure</span>
+            </div>
+            <h3 class="tx-title">Multi-tranche project financing</h3>
+            <p class="tx-desc">Structured and arranged long-tenor debt for a greenfield logistics corridor spanning three states.</p>
+            <p class="tx-value">₹650 Cr</p>
+            <p class="tx-value-label">Transaction Value</p>
+          </article>
+          <article class="tx-card">
+            <div class="tx-meta">
+              <span class="meta">2025</span>
+              <span class="meta">Real Estate</span>
+            </div>
+            <h3 class="tx-title">Structured construction finance</h3>
+            <p class="tx-desc">Designed escrow-backed facilities for a mixed-use development with phased drawdowns and release triggers.</p>
+            <p class="tx-value">₹480 Cr</p>
+            <p class="tx-value-label">Transaction Value</p>
+          </article>
+          <article class="tx-card">
+            <div class="tx-meta">
+              <span class="meta">2025</span>
+              <span class="meta">Manufacturing</span>
+            </div>
+            <h3 class="tx-title">Growth capital raise</h3>
+            <p class="tx-desc">Advised a precision engineering group on equity infusion and working-capital restructuring for capacity expansion.</p>
+            <p class="tx-value">₹300 Cr</p>
+            <p class="tx-value-label">Transaction Value</p>
+          </article>
+          <article class="tx-card">
+            <div class="tx-meta">
+              <span class="meta">2024</span>
+              <span class="meta">Energy</span>
+            </div>
+            <h3 class="tx-title">Renewable portfolio refinance</h3>
+            <p class="tx-desc">Consolidated project debt across solar assets into a single facility with improved covenants and tenor.</p>
+            <p class="tx-value">₹520 Cr</p>
+            <p class="tx-value-label">Transaction Value</p>
+          </article>
+        </div>
+        <div class="container reveal" style="margin-top:1.5rem">
+          <a class="btn btn-ghost btn-arrow" href="transactions.html">
+            Full transaction list
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case studies -->
+    <section class="section section-border bg-texture">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Case Studies</span>
+          <h2 class="section-title font-display">How we solved complex financial challenges.</h2>
+        </div>
+
+        <article class="case-featured reveal">
+          <div class="case-visual">
+            <img src="assets/images/case-manufacturing.png" alt="Manufacturing facility interior" loading="lazy" width="800" height="600" />
+            <span class="case-visual-label">Featured · Manufacturing</span>
+          </div>
+          <div class="case-body">
+            <span class="eyebrow">Case Study 01</span>
+            <h3 class="font-display" style="font-size:clamp(1.5rem,3vw,2rem);color:var(--ink);margin:0.5rem 0 0">Recapitalising a multi-plant industrial group</h3>
+            <div class="case-steps">
+              <div class="case-step">
+                <strong>Client Situation</strong>
+                <p>Family-owned manufacturer with five facilities and fragmented lender relationships.</p>
+              </div>
+              <div class="case-step">
+                <strong>Challenge</strong>
+                <p>Maturing facilities, covenant pressure and an imminent capacity investment.</p>
+              </div>
+              <div class="case-step">
+                <strong>Approach</strong>
+                <p>Unified capital map, lender sequencing and a dual-track debt-and-equity plan.</p>
+              </div>
+              <div class="case-step">
+                <strong>Outcome</strong>
+                <p>₹280 Cr refinance closed; 18-month runway for expansion secured.</p>
+              </div>
+            </div>
+            <a class="btn btn-ghost btn-arrow" href="case-studies.html#industrial-recap">
+              Read Case Study
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <div class="case-grid">
+          <a href="case-studies.html#logistics-pf" class="case-card reveal reveal-delay-1" style="padding:0;overflow:hidden">
+            <div style="aspect-ratio:16/9;overflow:hidden">
+              <img src="assets/images/case-logistics.png" alt="" loading="lazy" width="640" height="360" style="width:100%;height:100%;object-fit:cover" />
+            </div>
+            <div style="padding:1.75rem">
+              <span class="meta">Infrastructure</span>
+              <h3>Project finance for a regional logistics hub</h3>
+              <p class="text-muted" style="font-size:0.9rem;margin:0">Limited-recourse structure with offtake-linked cash sweeps.</p>
+            </div>
+          </a>
+          <a href="case-studies.html#reit-prep" class="case-card reveal reveal-delay-2" style="padding:0;overflow:hidden">
+            <div style="aspect-ratio:16/9;overflow:hidden">
+              <img src="assets/images/case-realestate.png" alt="" loading="lazy" width="640" height="360" style="width:100%;height:100%;object-fit:cover" />
+            </div>
+            <div style="padding:1.75rem">
+              <span class="meta">Real Estate</span>
+              <h3>Preparing a commercial portfolio for institutional capital</h3>
+              <p class="text-muted" style="font-size:0.9rem;margin:0">Holdco redesign, debt clean-up and investor-ready reporting.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why us -->
+    <section class="section section-border">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Why Northvale</span>
+          <h2 class="section-title font-display">What sets our counsel apart.</h2>
+        </div>
+        <div class="why-grid">
+          <div class="why-item reveal">
+            <span class="why-num">01</span>
+            <h3>Deep Expertise</h3>
+            <p>Sector fluency across real assets, industrials and growth businesses — not generic templates.</p>
+          </div>
+          <div class="why-item reveal reveal-delay-1">
+            <span class="why-num">02</span>
+            <h3>Independent Thinking</h3>
+            <p>We challenge assumptions early so capital structure matches strategy, not habit.</p>
+          </div>
+          <div class="why-item reveal reveal-delay-2">
+            <span class="why-num">03</span>
+            <h3>Execution Discipline</h3>
+            <p>Advice that survives the term sheet — documentation, covenants and close management.</p>
+          </div>
+          <div class="why-item reveal reveal-delay-3">
+            <span class="why-num">04</span>
+            <h3>Long-Term Relationships</h3>
+            <p>We stay through refinancings, expansions and ownership transitions — not just the first raise.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team preview -->
+    <section class="section section-border bg-texture">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Leadership</span>
+          <h2 class="section-title font-display">Partners who stay close to the work.</h2>
+        </div>
+        <div class="team-list">
+          <article class="team-member reveal">
+            <div class="team-photo">
+              <img src="assets/images/team-arjun.png" alt="Arjun Mehta, Managing Partner" loading="lazy" width="640" height="800" />
+            </div>
+            <div class="team-info">
+              <h3>Arjun Mehta</h3>
+              <span class="team-role">Managing Partner</span>
+              <p class="team-bio">Leads corporate finance and complex debt mandates. Previously advised mid-market industrials on multi-lender restructurings and growth capital raises.</p>
+              <a class="team-link" href="team.html">Profile <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="team-member reveal">
+            <div class="team-photo">
+              <img src="assets/images/team-priya.png" alt="Priya Natarajan, Partner, Transactions" loading="lazy" width="640" height="800" />
+            </div>
+            <div class="team-info">
+              <h3>Priya Natarajan</h3>
+              <span class="team-role">Partner, Transactions</span>
+              <p class="team-bio">Focuses on M&amp;A, project finance and real-asset capital structures. Known for bridging promoter priorities with institutional lender requirements.</p>
+              <a class="team-link" href="team.html">Profile <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+        <div class="reveal" style="margin-top:2.5rem">
+          <a class="btn btn-ghost btn-arrow" href="team.html">
+            Meet the team
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="section section-border">
+      <div class="container">
+        <div class="testimonial reveal">
+          <blockquote class="testimonial-quote">
+            “Northvale brought structure and clarity to a highly complex financing decision.”
+          </blockquote>
+          <p class="testimonial-attr">— CEO, Industrial Group</p>
+          <div class="testimonial-sectors" aria-label="Client sectors">
+            <span>Real Estate Developers</span>
+            <span>Infrastructure Sponsors</span>
+            <span>Family Enterprises</span>
+            <span>Growth Companies</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="cta-block" id="contact">
+      <div class="container" style="position:relative;z-index:1">
+        <p class="eyebrow" style="color:rgba(248,246,241,0.55)">Let's Talk</p>
+        <h2 class="cta-title font-display reveal">Complex financial decisions deserve clear thinking.</h2>
+        <p class="cta-sub reveal reveal-delay-1">Start a conversation with our partners.</p>
+        <a class="cta-link reveal reveal-delay-2" href="#contact-form-section">
+          Start a conversation
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
+        <div class="cta-details reveal reveal-delay-3">
+          <div class="cta-cities">
+            <span>Mumbai</span>
+            <span>Bengaluru</span>
+            <span>Delhi</span>
+          </div>
+          <div class="cta-contact">
+            <a href="mailto:hello@northvaleadvisory.com">hello@northvaleadvisory.com</a>
+            <a href="tel:+912248001200">+91 22 4800 1200</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact form -->
+    <section class="section" id="contact-form-section">
+      <div class="container contact-layout">
+        <div class="reveal">
+          <span class="eyebrow">Contact</span>
+          <h2 class="font-display" style="font-size:clamp(2rem,4vw,2.75rem);color:var(--ink);margin:0.75rem 0 1.5rem">Tell us about your mandate.</h2>
+          <div class="contact-info-item">
+            <span class="meta">Office</span>
+            <p>14th Floor, Meridian Tower<br />Bandra Kurla Complex<br />Mumbai 400 051</p>
+          </div>
+          <div class="contact-info-item">
+            <span class="meta">Email</span>
+            <a href="mailto:hello@northvaleadvisory.com">hello@northvaleadvisory.com</a>
+          </div>
+          <div class="contact-info-item">
+            <span class="meta">Phone</span>
+            <a href="tel:+912248001200">+91 22 4800 1200</a>
+          </div>
+        </div>
+        <form id="contact-form" class="reveal reveal-delay-2" novalidate>
+          <div class="form-grid two-col">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required autocomplete="name" />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required autocomplete="email" />
+            </div>
+          </div>
+          <div class="form-grid two-col" style="margin-top:1.25rem">
+            <div class="form-field">
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" autocomplete="organization" />
+            </div>
+            <div class="form-field">
+              <label for="interest">Interest</label>
+              <select id="interest" name="interest">
+                <option value="">Select</option>
+                <option>Corporate Finance</option>
+                <option>Debt Advisory</option>
+                <option>Transaction Advisory</option>
+                <option>Project Finance</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field" style="margin-top:1.25rem">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-magnetic" style="margin-top:2rem">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">Northvale Advisory</div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="about.html">About</a>
+          <a href="team.html">Team</a>
+          <a href="services.html">Services</a>
+          <a href="transactions.html">Transactions</a>
+          <a href="case-studies.html">Case Studies</a>
+          <a href="careers.html">Careers</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Northvale Advisory</span>
+        <div class="footer-legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Northvale Advisory services — corporate finance, debt advisory, equity structuring, transactions, project finance and more." />
+  <title>Services | Northvale Advisory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: { DEFAULT: '#142033', soft: '#1e2d45' },
+            ivory: { DEFAULT: '#f8f6f1', deep: '#f0ece4' },
+            stone: { DEFAULT: '#e5e1d8', soft: '#ebe7df' },
+            charcoal: { DEFAULT: '#2a2a28', muted: '#5c5a55' },
+            accent: { DEFAULT: '#2f6b5d', hover: '#25574b' },
+            line: '#ddd8ce',
+          },
+          fontFamily: {
+            display: ['"Instrument Serif"', 'Georgia', 'serif'],
+            sans: ['Manrope', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page-loader" role="status" aria-live="polite" aria-label="Loading">
+    <div class="loader-inner">
+      <div class="loader-brand"><span>NORTHVALE</span><span>ADVISORY</span></div>
+      <div class="loader-bar" aria-hidden="true"></div>
+    </div>
+  </div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Northvale Advisory home">Northvale<span>Advisory</span></a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="team.html">Team</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="transactions.html">Transactions</a>
+        <a class="nav-link" href="case-studies.html">Case Studies</a>
+        <a class="nav-link" href="careers.html">Careers</a>
+        <a class="btn btn-primary btn-magnetic" href="index.html#contact">Contact Us</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <nav id="mobile-nav" class="nav-mobile" aria-hidden="true" aria-label="Mobile">
+    <a href="about.html">About</a>
+    <a href="team.html">Team</a>
+    <a href="services.html">Services</a>
+    <a href="transactions.html">Transactions</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="careers.html">Careers</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+
+  <main>
+    <header class="page-hero">
+      <div class="container">
+        <p class="eyebrow reveal">Services</p>
+        <h1 class="page-hero-title font-display reveal reveal-delay-1">Integrated advisory across the capital stack.</h1>
+        <p class="page-hero-lead reveal reveal-delay-2">Eight core capabilities — delivered as coherent programmes, not disconnected products.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <div class="service-list reveal" role="list">
+          <button type="button" class="service-row is-open" role="listitem" aria-expanded="true" id="corporate-finance">
+            <span class="service-num">01</span>
+            <div>
+              <h2 class="service-name">Corporate Finance</h2>
+              <p class="service-desc">Capital planning, financial modelling, board packs and liquidity roadmaps for growth, restructuring and ownership events. We align financing choices with operating strategy and governance reality.</p>
+            </div>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </button>
+          <button type="button" class="service-row" role="listitem" aria-expanded="false" id="debt">
+            <span class="service-num">02</span>
+            <div>
+              <h2 class="service-name">Debt Advisory</h2>
+              <p class="service-desc">Term loans, structured credit, NBFC and bank facilities. We prepare lender materials, run competitive processes and negotiate covenants that protect flexibility after close.</p>
+            </div>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </button>
+          <button type="button" class="service-row" role="listitem" aria-expanded="false" id="equity">
+            <span class="service-num">03</span>
+            <div>
+              <h2 class="service-name">Equity &amp; Capital Structuring</h2>
+              <p class="service-desc">Ownership design, preferential instruments, secondary liquidity and fundraising strategy. We balance promoter control with investor return mechanics.</p>
+            </div>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </button>
+          <button type="button" class="service-row" role="listitem" aria-expanded="false" id="transactions">
+            <span class="service-num">04</span>
+            <div>
+              <h2 class="service-name">Transaction Advisory</h2>
+              <p class="service-desc">Buy-side and sell-side support for acquisitions, carve-outs and strategic investments — from valuation framing and diligence coordination through SPA economics and financing certainty.</p>
+            </div>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </button>
+          <button type="button" class="service-row" role="listitem" aria-expanded="false" id="project-finance">
+            <span class="service-num">05</span>
+            <div>
+              <h2 class="service-name">Project Finance</h2>
+              <p class="service-desc">Non-recourse and limited-recourse financing for infrastructure, energy and large developments. We model cash-flow waterfalls, offtake risk and security packages lenders recognise.</p>
+            </div>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </button>
+          <button type="button" class="service-row" role="listitem" aria-expanded="false" id="working-capital">
+            <span class="service-num">06</span>
+            <div>
+              <h2 class="service-name">Working Capital Solutions</h2>
+              <p class="service-desc">Cash-conversion diagnostics, facility design and bank-guarantee structures for contractors, manufacturers and trading businesses under growth or seasonal pressure.</p>
+            </div>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </button>
+          <button type="button" class="service-row" role="listitem" aria-expanded="false" id="strategic">
+            <span class="service-num">07</span>
+            <div>
+              <h2 class="service-name">Strategic Financial Advisory</h2>
+              <p class="service-desc">Scenario planning, capital allocation frameworks and decision support for transformative moves — expansions, exits, JV design and succession-linked financing.</p>
+            </div>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </button>
+          <button type="button" class="service-row" role="listitem" aria-expanded="false" id="real-estate">
+            <span class="service-num">08</span>
+            <div>
+              <h2 class="service-name">Real Estate &amp; Infrastructure Finance</h2>
+              <p class="service-desc">Construction finance, lease rental discounting, portfolio refinancing and sponsor-level capital for developers and infrastructure platforms.</p>
+            </div>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-border bg-texture">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">How we engage</span>
+          <h2 class="section-title font-display">A clear process from brief to close.</h2>
+        </div>
+        <div class="why-grid">
+          <div class="why-item reveal">
+            <span class="why-num">01</span>
+            <h3>Diagnose</h3>
+            <p>Map cash flows, covenants, stakeholders and constraints before recommending structure.</p>
+          </div>
+          <div class="why-item reveal reveal-delay-1">
+            <span class="why-num">02</span>
+            <h3>Design</h3>
+            <p>Build options with trade-offs — cost, flexibility, control and refinanceability.</p>
+          </div>
+          <div class="why-item reveal reveal-delay-2">
+            <span class="why-num">03</span>
+            <h3>Engage</h3>
+            <p>Run disciplined lender or investor processes with coherent materials and narrative.</p>
+          </div>
+          <div class="why-item reveal reveal-delay-3">
+            <span class="why-num">04</span>
+            <h3>Close</h3>
+            <p>Protect negotiated economics through documentation, conditions precedent and drawdown.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-block">
+      <div class="container" style="position:relative;z-index:1">
+        <h2 class="cta-title font-display reveal" style="font-size:clamp(2rem,5vw,3.25rem)">Need a specific capability?</h2>
+        <a class="cta-link reveal" href="index.html#contact">Discuss your mandate <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">Northvale Advisory</div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="about.html">About</a>
+          <a href="team.html">Team</a>
+          <a href="services.html">Services</a>
+          <a href="transactions.html">Transactions</a>
+          <a href="case-studies.html">Case Studies</a>
+          <a href="careers.html">Careers</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Northvale Advisory</span>
+        <div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

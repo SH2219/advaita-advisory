@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Northvale Advisory — our company, vision and philosophy, and why clients choose us for capital and transaction advice." />
+  <title>About | Northvale Advisory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: { DEFAULT: '#142033', soft: '#1e2d45' },
+            ivory: { DEFAULT: '#f8f6f1', deep: '#f0ece4' },
+            stone: { DEFAULT: '#e5e1d8', soft: '#ebe7df' },
+            charcoal: { DEFAULT: '#2a2a28', muted: '#5c5a55' },
+            accent: { DEFAULT: '#2f6b5d', hover: '#25574b' },
+            line: '#ddd8ce',
+          },
+          fontFamily: {
+            display: ['"Instrument Serif"', 'Georgia', 'serif'],
+            sans: ['Manrope', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page-loader" role="status" aria-live="polite" aria-label="Loading">
+    <div class="loader-inner">
+      <div class="loader-brand"><span>NORTHVALE</span><span>ADVISORY</span></div>
+      <div class="loader-bar" aria-hidden="true"></div>
+    </div>
+  </div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Northvale Advisory home">Northvale<span>Advisory</span></a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="team.html">Team</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="transactions.html">Transactions</a>
+        <a class="nav-link" href="case-studies.html">Case Studies</a>
+        <a class="nav-link" href="careers.html">Careers</a>
+        <a class="btn btn-primary btn-magnetic" href="index.html#contact">Contact Us</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <nav id="mobile-nav" class="nav-mobile" aria-hidden="true" aria-label="Mobile">
+    <a href="about.html">About</a>
+    <a href="team.html">Team</a>
+    <a href="services.html">Services</a>
+    <a href="transactions.html">Transactions</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="careers.html">Careers</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+
+  <main>
+    <header class="page-hero">
+      <div class="container">
+        <p class="eyebrow reveal">About</p>
+        <h1 class="page-hero-title font-display reveal reveal-delay-1">Clarity in capital. Discipline in execution.</h1>
+        <p class="page-hero-lead reveal reveal-delay-2">Northvale Advisory is a boutique financial advisory firm helping businesses structure capital, navigate transactions and grow with intention.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <nav class="sub-nav reveal" aria-label="About sections">
+          <a href="#company" class="is-active">Company</a>
+          <a href="#vision">Vision &amp; Philosophy</a>
+          <a href="#why-us">Why Us</a>
+        </nav>
+
+        <div id="company" class="prose reveal">
+          <h2 class="font-display" style="margin-top:0">Company</h2>
+          <p>
+            We advise promoters, boards and investors on decisions where capital structure,
+            timing and counterparty dynamics determine outcomes. Our work spans debt and equity,
+            project and working-capital solutions, and transaction support from first conversation to close.
+          </p>
+          <p>
+            Northvale operates as a senior-led practice. Partners remain accountable for analysis,
+            lender engagement and documentation — so advice stays coherent from model to mandate.
+          </p>
+          <p>
+            We serve clients across real estate, infrastructure, manufacturing, energy, logistics,
+            technology, healthcare and consumer businesses — typically mid-market and growth-stage
+            enterprises navigating a step-change in scale or ownership.
+          </p>
+        </div>
+
+        <div id="vision" class="prose reveal" style="margin-top:4rem">
+          <h2 class="font-display">Vision &amp; Philosophy</h2>
+          <p>
+            We believe durable growth follows capital that is deliberately designed — not hastily arranged.
+            Every engagement starts with the business truth: cash flows, covenants, governance and options under stress.
+          </p>
+          <p>
+            Our philosophy is simple. Prefer transparency over complexity. Prefer structure that can
+            be refinanced over structure that merely closes. Prefer long-term client relationships
+            over transactional volume.
+          </p>
+          <p style="font-family:'Instrument Serif',serif;font-size:1.5rem;color:var(--ink);line-height:1.4;margin-top:2rem">
+            “Capital should enable strategy — not constrain it.”
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-us" class="section section-border bg-texture">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Why Us</span>
+          <h2 class="section-title font-display">Four commitments we hold to.</h2>
+        </div>
+        <div class="why-grid">
+          <div class="why-item reveal">
+            <span class="why-num">01</span>
+            <h3>Deep Expertise</h3>
+            <p>Hands-on experience across debt markets, equity structuring and sector-specific financing norms.</p>
+          </div>
+          <div class="why-item reveal reveal-delay-1">
+            <span class="why-num">02</span>
+            <h3>Independent Thinking</h3>
+            <p>Unbiased counsel — we recommend the structure the business needs, even when it is not the easiest path.</p>
+          </div>
+          <div class="why-item reveal reveal-delay-2">
+            <span class="why-num">03</span>
+            <h3>Execution Discipline</h3>
+            <p>From term sheet to disbursement, we manage process, stakeholders and documentation risk.</p>
+          </div>
+          <div class="why-item reveal reveal-delay-3">
+            <span class="why-num">04</span>
+            <h3>Long-Term Relationships</h3>
+            <p>Clients return for refinancings, acquisitions and succession transitions — because continuity compounds.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-block">
+      <div class="container" style="position:relative;z-index:1">
+        <h2 class="cta-title font-display reveal" style="font-size:clamp(2rem,5vw,3.5rem)">Ready to discuss your capital agenda?</h2>
+        <a class="cta-link reveal" href="index.html#contact">Contact the team <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">Northvale Advisory</div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="about.html">About</a>
+          <a href="team.html">Team</a>
+          <a href="services.html">Services</a>
+          <a href="transactions.html">Transactions</a>
+          <a href="case-studies.html">Case Studies</a>
+          <a href="careers.html">Careers</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Northvale Advisory</span>
+        <div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
