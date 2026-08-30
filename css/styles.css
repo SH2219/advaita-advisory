@@ -46,7 +46,7 @@
   --space-lg: 2.5rem;
   --space-section: clamp(3.5rem, 8vw, 7.5rem);
   --space-section-sm: clamp(2.5rem, 5vw, 4.5rem);
-  --container-px: 1rem;
+  --container-px: 1.25rem;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
   --duration-fast: 0.25s;
@@ -170,14 +170,18 @@ button {
   width: 100%;
   max-width: 1120px;
   margin-inline: auto;
-  padding-inline: var(--container-px);
+  padding-left: var(--container-px) !important;
+  padding-right: var(--container-px) !important;
+  box-sizing: border-box;
 }
 
 .container-wide {
   width: 100%;
   max-width: 1280px;
   margin-inline: auto;
-  padding-inline: var(--container-px);
+  padding-left: var(--container-px) !important;
+  padding-right: var(--container-px) !important;
+  box-sizing: border-box;
 }
 
 @media (min-width: 640px) {
@@ -312,7 +316,9 @@ button {
   width: 100%;
   max-width: 1280px;
   margin-inline: auto;
-  padding-inline: var(--container-px);
+  padding-left: var(--container-px) !important;
+  padding-right: var(--container-px) !important;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -2016,9 +2022,16 @@ button {
 /* Careers */
 .role-card {
   display: grid;
-  gap: 1rem;
+  gap: 1.25rem;
   padding: 2rem 0;
   border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 699px) {
+  .role-card .btn {
+    align-self: flex-start;
+    width: auto;
+  }
 }
 
 @media (min-width: 700px) {
