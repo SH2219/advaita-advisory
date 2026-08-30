@@ -266,6 +266,85 @@
     });
   }
 
+  /* ——— Flow diagram ——— */
+  function initFlowDiagram() {
+    const canvas = qs("#flow-canvas") || qs(".flow-canvas");
+    if (!canvas) return;
+
+    const lines = qsa(".flow-line", canvas);
+    const particles = qsa(".flow-particle", canvas);
+
+    lines.forEach(function (line) {
+      if (typeof line.getTotalLength !== "function") return;
+      const len = line.getTotalLength();
+      line.style.setProperty("--line-len", String(len));
+      line.style.strokeDasharray = String(len);
+      line.style.strokeDashoffset = String(len);
+    });
+
+    function startParticles() {
+      if (prefersReducedMotion || !particles.length) return;
+
+      const configs = [
+        { line: 0, dur: 3600, delay: 400 },
+        { line: 1, dur: 4000, delay: 900 },
+        { line: 2, dur: 3400, delay: 200 },
+        { line: 3, dur: 3800, delay: 1100 },
+      ];
+
+      configs.forEach(function (cfg, i) {
+        const line = lines[cfg.line];
+        const dot = particles[i];
+        if (!line || !dot) return;
+
+        const len = line.getTotalLength();
+        let startTime = null;
+
+        function tick(now) {
+          if (!startTime) startTime = now;
+          const elapsed = now - startTime - cfg.delay;
+          if (elapsed < 0) {
+            requestAnimationFrame(tick);
+            return;
+          }
+
+          const phase = (elapsed % cfg.dur) / cfg.dur;
+          const pt = line.getPointAtLength(phase * len);
+          dot.setAttribute("cx", String(pt.x));
+          dot.setAttribute("cy", String(pt.y));
+
+          let op = 0;
+          if (phase > 0.06 && phase < 0.94) op = 0.75;
+          dot.setAttribute("opacity", String(op));
+
+          requestAnimationFrame(tick);
+        }
+
+        requestAnimationFrame(tick);
+      });
+    }
+
+    function activate() {
+      canvas.classList.add("is-live");
+      startParticles();
+    }
+
+    function whenReady() {
+      if (document.body.classList.contains("is-ready")) {
+        setTimeout(activate, 100);
+      } else {
+        const wait = setInterval(function () {
+          if (document.body.classList.contains("is-ready")) {
+            clearInterval(wait);
+            setTimeout(activate, 100);
+          }
+        }, 40);
+      }
+    }
+
+    whenReady();
+  }
+
   /* ——— Hover / microinteractions ——— */
   function initHoverInteractions() {
     qsa(".btn-magnetic").forEach(function (btn) {
@@ -294,6 +373,7 @@
     initCounterAnimations();
     initServiceRows();
     initContactForm();
+    initFlowDiagram();
     initHoverInteractions();
   }
 

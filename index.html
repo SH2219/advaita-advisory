@@ -116,27 +116,41 @@
         </div>
 
         <div class="hero-visual hero-animate hero-animate-6">
-          <div class="flow-canvas">
+          <div class="flow-canvas" id="flow-canvas">
             <span class="flow-label flow-label-tl">Capital Structure</span>
             <span class="flow-label flow-label-br">Value Creation</span>
-            <svg viewBox="0 0 400 420" fill="none" class="flow-drift" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <line class="flow-line" x1="80" y1="100" x2="200" y2="200" stroke="#2a6358" stroke-width="1" opacity="0.5"/>
-              <line class="flow-line" x1="320" y1="90" x2="200" y2="200" stroke="#2a6358" stroke-width="1" opacity="0.5"/>
-              <line class="flow-line" x1="200" y1="200" x2="110" y2="320" stroke="#0f1829" stroke-width="1" opacity="0.35"/>
-              <line class="flow-line" x1="200" y1="200" x2="300" y2="330" stroke="#3d6b8c" stroke-width="1" opacity="0.4"/>
-              <circle class="flow-node" cx="80" cy="100" r="5" fill="#2a6358"/>
-              <circle class="flow-node" cx="320" cy="90" r="5" fill="#3d6b8c"/>
-              <circle class="flow-node" cx="200" cy="200" r="8" fill="#0f1829"/>
-              <circle class="flow-node" cx="110" cy="320" r="5" fill="#4a4844"/>
-              <circle class="flow-node" cx="300" cy="330" r="5" fill="#4a4844"/>
-              <circle cx="200" cy="200" r="48" stroke="#d8d3c8" stroke-width="1" fill="none" opacity="0.9"/>
-              <circle cx="200" cy="200" r="78" stroke="#d8d3c8" stroke-width="1" fill="none" opacity="0.55"/>
-              <circle cx="200" cy="200" r="118" stroke="#d8d3c8" stroke-width="1" fill="none" opacity="0.3"/>
-              <text x="68" y="82" fill="#4a4844" font-size="9" font-family="Manrope" letter-spacing="1.5">DEBT</text>
-              <text x="292" y="74" fill="#4a4844" font-size="9" font-family="Manrope" letter-spacing="1.5">EQUITY</text>
-              <text x="172" y="205" fill="#f8f6f1" font-size="8" font-family="Manrope" letter-spacing="1">CORE</text>
-              <text x="78" y="348" fill="#4a4844" font-size="9" font-family="Manrope" letter-spacing="1.5">GROWTH</text>
-              <text x="268" y="358" fill="#4a4844" font-size="9" font-family="Manrope" letter-spacing="1.5">EXIT</text>
+            <svg viewBox="0 0 400 420" fill="none" class="flow-diagram" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <g class="flow-rings">
+                <circle class="flow-ring" cx="200" cy="200" r="118" stroke="#d8d3c8" stroke-width="1" fill="none"/>
+                <circle class="flow-ring" cx="200" cy="200" r="78" stroke="#d8d3c8" stroke-width="1" fill="none"/>
+                <circle class="flow-ring" cx="200" cy="200" r="48" stroke="#d8d3c8" stroke-width="1" fill="none"/>
+              </g>
+              <g class="flow-spokes">
+                <line class="flow-line" x1="80" y1="100" x2="200" y2="200" stroke="#256b5e" stroke-width="1" opacity="0.55"/>
+                <line class="flow-line" x1="320" y1="90" x2="200" y2="200" stroke="#256b5e" stroke-width="1" opacity="0.55"/>
+                <line class="flow-line" x1="200" y1="200" x2="110" y2="320" stroke="#17212b" stroke-width="1" opacity="0.4"/>
+                <line class="flow-line" x1="200" y1="200" x2="300" y2="330" stroke="#3d6580" stroke-width="1" opacity="0.45"/>
+              </g>
+              <g class="flow-particles" aria-hidden="true">
+                <circle class="flow-particle" r="2.5" fill="#256b5e" opacity="0"/>
+                <circle class="flow-particle" r="2.5" fill="#3d6580" opacity="0"/>
+                <circle class="flow-particle" r="2" fill="#17212b" opacity="0"/>
+                <circle class="flow-particle" r="2" fill="#59636e" opacity="0"/>
+              </g>
+              <g class="flow-nodes">
+                <circle class="flow-node flow-node--satellite" cx="80" cy="100" r="5" fill="#256b5e"/>
+                <circle class="flow-node flow-node--satellite" cx="320" cy="90" r="5" fill="#3d6580"/>
+                <circle class="flow-node flow-node--core" cx="200" cy="200" r="8" fill="#17212b"/>
+                <circle class="flow-node flow-node--satellite" cx="110" cy="320" r="5" fill="#59636e"/>
+                <circle class="flow-node flow-node--satellite" cx="300" cy="330" r="5" fill="#59636e"/>
+              </g>
+              <g class="flow-tags">
+                <text class="flow-tag" x="68" y="82" fill="#59636e" font-size="9" font-family="Manrope" letter-spacing="1.5">DEBT</text>
+                <text class="flow-tag" x="292" y="74" fill="#59636e" font-size="9" font-family="Manrope" letter-spacing="1.5">EQUITY</text>
+                <text class="flow-tag flow-tag--core" x="172" y="205" fill="#faf9f6" font-size="8" font-family="Manrope" letter-spacing="1">CORE</text>
+                <text class="flow-tag" x="78" y="348" fill="#59636e" font-size="9" font-family="Manrope" letter-spacing="1.5">GROWTH</text>
+                <text class="flow-tag" x="268" y="358" fill="#59636e" font-size="9" font-family="Manrope" letter-spacing="1.5">EXIT</text>
+              </g>
             </svg>
           </div>
         </div>

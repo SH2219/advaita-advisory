@@ -757,6 +757,167 @@ button {
 .flow-canvas svg {
   width: 100%;
   height: 100%;
+  display: block;
+}
+
+.flow-diagram {
+  overflow: visible;
+}
+
+.flow-ring {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(0.82);
+}
+
+.flow-line {
+  stroke-linecap: round;
+}
+
+.flow-node {
+  opacity: 0;
+  transform-origin: center;
+}
+
+.flow-node--core {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.flow-node--satellite {
+  transform-box: fill-box;
+  transform: scale(0);
+}
+
+.flow-tag {
+  opacity: 0;
+  font-weight: 600;
+}
+
+.flow-particle {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Flow diagram — entrance sequence */
+.flow-canvas.is-live .flow-ring:nth-child(1) {
+  animation: flowRingIn 1s var(--ease-out) 0.15s forwards;
+  --ring-op: 0.3;
+}
+
+.flow-canvas.is-live .flow-ring:nth-child(2) {
+  animation: flowRingIn 1s var(--ease-out) 0.25s forwards;
+  --ring-op: 0.55;
+}
+
+.flow-canvas.is-live .flow-ring:nth-child(3) {
+  animation: flowRingIn 1s var(--ease-out) 0.35s forwards;
+  --ring-op: 0.9;
+}
+
+.flow-canvas.is-live .flow-node--core {
+  animation: flowCoreIn 0.7s var(--ease-out) 0.45s forwards, flowCorePulse 4s ease-in-out 1.2s infinite;
+}
+
+.flow-canvas.is-live .flow-line {
+  animation: flowDrawLine 1.1s var(--ease-out) forwards;
+}
+
+.flow-canvas.is-live .flow-line:nth-child(1) { animation-delay: 0.55s; }
+.flow-canvas.is-live .flow-line:nth-child(2) { animation-delay: 0.65s; }
+.flow-canvas.is-live .flow-line:nth-child(3) { animation-delay: 0.75s; }
+.flow-canvas.is-live .flow-line:nth-child(4) { animation-delay: 0.85s; }
+
+.flow-canvas.is-live .flow-node--satellite {
+  animation: flowSatelliteIn 0.55s var(--ease-out) forwards;
+}
+
+.flow-canvas.is-live .flow-nodes .flow-node--satellite:nth-child(1) { animation-delay: 1.05s; }
+.flow-canvas.is-live .flow-nodes .flow-node--satellite:nth-child(2) { animation-delay: 1.15s; }
+.flow-canvas.is-live .flow-nodes .flow-node--satellite:nth-child(4) { animation-delay: 1.25s; }
+.flow-canvas.is-live .flow-nodes .flow-node--satellite:nth-child(5) { animation-delay: 1.35s; }
+
+.flow-canvas.is-live .flow-tag {
+  animation: flowTagIn 0.6s var(--ease-out) forwards;
+}
+
+.flow-canvas.is-live .flow-tags .flow-tag:nth-child(1) { animation-delay: 1.45s; }
+.flow-canvas.is-live .flow-tags .flow-tag:nth-child(2) { animation-delay: 1.52s; }
+.flow-canvas.is-live .flow-tags .flow-tag:nth-child(3) { animation-delay: 0.95s; }
+.flow-canvas.is-live .flow-tags .flow-tag:nth-child(4) { animation-delay: 1.6s; }
+.flow-canvas.is-live .flow-tags .flow-tag:nth-child(5) { animation-delay: 1.68s; }
+
+.flow-canvas.is-live .flow-label-tl {
+  animation: flowLabelIn 0.6s var(--ease-out) 1.75s forwards;
+  opacity: 0;
+}
+
+.flow-canvas.is-live .flow-label-br {
+  animation: flowLabelIn 0.6s var(--ease-out) 1.85s forwards;
+  opacity: 0;
+}
+
+@keyframes flowRingIn {
+  from {
+    opacity: 0;
+    transform: scale(0.82);
+  }
+  to {
+    opacity: var(--ring-op, 0.5);
+    transform: scale(1);
+  }
+}
+
+@keyframes flowCoreIn {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes flowCorePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
+@keyframes flowDrawLine {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes flowSatelliteIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes flowTagIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flowLabelIn {
+  to { opacity: 1; }
+}
+
+.flow-canvas.is-live .flow-diagram {
+  animation: flowDiagramFloat 14s ease-in-out infinite alternate;
+}
+
+@keyframes flowDiagramFloat {
+  from { transform: translate(0, 0); }
+  to { transform: translate(4px, -6px); }
 }
 
 .flow-canvas img,
@@ -2243,50 +2404,14 @@ body.is-ready .hero-animate-6 { animation-delay: 0.58s; opacity: 0; }
   }
 }
 
-/* Flow SVG animation */
+/* Flow SVG animation — legacy selectors kept for reduced-motion reset */
 .flow-node {
   opacity: 0;
 }
 
 .flow-line {
-  stroke-dasharray: 400;
-  stroke-dashoffset: 400;
-}
-
-body.is-ready .flow-node {
-  animation: nodeIn 0.6s var(--ease-out) forwards;
-}
-
-body.is-ready .flow-line {
-  animation: drawLine 1.4s var(--ease-out) forwards;
-}
-
-body.is-ready .flow-node:nth-of-type(1) { animation-delay: 0.5s; }
-body.is-ready .flow-node:nth-of-type(2) { animation-delay: 0.65s; }
-body.is-ready .flow-node:nth-of-type(3) { animation-delay: 0.8s; }
-body.is-ready .flow-node:nth-of-type(4) { animation-delay: 0.95s; }
-body.is-ready .flow-node:nth-of-type(5) { animation-delay: 1.1s; }
-
-body.is-ready .flow-line:nth-of-type(1) { animation-delay: 0.55s; }
-body.is-ready .flow-line:nth-of-type(2) { animation-delay: 0.7s; }
-body.is-ready .flow-line:nth-of-type(3) { animation-delay: 0.85s; }
-body.is-ready .flow-line:nth-of-type(4) { animation-delay: 1s; }
-
-@keyframes nodeIn {
-  to { opacity: 1; }
-}
-
-@keyframes drawLine {
-  to { stroke-dashoffset: 0; }
-}
-
-.flow-drift {
-  animation: drift 12s ease-in-out infinite alternate;
-}
-
-@keyframes drift {
-  from { transform: translate(0, 0); }
-  to { transform: translate(6px, -8px); }
+  stroke-dasharray: var(--line-len, 400);
+  stroke-dashoffset: var(--line-len, 400);
 }
 
 /* Reduced motion */
@@ -2315,6 +2440,7 @@ body.is-ready .flow-line:nth-of-type(4) { animation-delay: 1s; }
   .team-photo img,
   .team-link,
   .flow-drift,
+  .flow-diagram,
   .why-item,
   .sector-item,
   .metric::after {
@@ -2341,11 +2467,19 @@ body.is-ready .flow-line:nth-of-type(4) { animation-delay: 1s; }
   .loader-bar::after,
   body.is-ready .hero-animate,
   body.is-ready .flow-node,
-  body.is-ready .flow-line {
+  body.is-ready .flow-line,
+  .flow-canvas.is-live .flow-ring,
+  .flow-canvas.is-live .flow-tag,
+  .flow-canvas.is-live .flow-particle,
+  .flow-canvas.is-live .flow-diagram {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
     stroke-dashoffset: 0 !important;
+  }
+
+  .flow-node--satellite {
+    transform: scale(1) !important;
   }
 
   .page-loader.is-done {
